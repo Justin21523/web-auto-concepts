@@ -1,6 +1,7 @@
 const { chromium } = require('playwright');
 
 (async () => {
+  console.time('playwright');
   // 1. 啟動 Chromium（headless）
   const browser = await chromium.launch({ headless: true });
 
@@ -10,13 +11,9 @@ const { chromium } = require('playwright');
   // 3. 開新頁
   const page = await context.newPage();
 
-  // 4. 導頁並截圖
   await page.goto('https://www.google.com');
-  await page.screenshot({
-    path: 'module-01-setup/screenshots/playwright_google.png',
-    fullPage: true
-  });
 
   // 5. 關閉
   await browser.close();
+  console.timeEnd('playwright');
 })();
