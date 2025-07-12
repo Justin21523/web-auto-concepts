@@ -142,3 +142,14 @@ project-root/
   * `feat(module-01): add Puppeteer Google screenshot script`
   * `feat(module-01): add Playwright Google screenshot script`
   * `docs(module-01): record environment setup and performance results`
+
+
+#### Performance Comparison
+| Tool                        | Run 1   | Run 2   | Run 3   | Run 4   | Run 5   | Average    |
+| --------------------------- | ------- | ------- | ------- | ------- | ------- | ---------- |
+| **Selenium**                | 6.07 s  | 5.08 s  | 5.07 s  | 5.07 s  | 5.64 s  | **5.39 s** |
+| **undetected-chromedriver** | 3.30 s  | 3.27 s  | 3.05 s  | 2.92 s  | 2.83 s  | **3.07 s** |
+| **Puppeteer**               | 1.824 s | 1.715 s | 1.386 s | 1.290 s | 1.309 s | **1.50 s** |
+| **Playwright**              | 1.555 s | 1.471 s | 1.676 s | 1.688 s | 1.512 s | **1.58 s** |
+---
+**結論**：Playwright 啟動速度最快，其次為 Puppeteer；Selenium 最穩定但較慢；undetected-chromedriver 則因 stealth 機制稍微多了延遲。
