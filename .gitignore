@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.env
+*.egg-info/
+dist/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# OS、IDE
+.DS_Store
+*.log
+.vscode/
+.ipynb_checkpoints/
+
+# 其他
+.env.local
