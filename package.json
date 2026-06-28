@@ -4,7 +4,12 @@
   "description": "Web Automation × Git 教學專案",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "demo:dev": "npm --prefix demo-app run dev",
+    "demo:build": "npm --prefix demo-app run build",
+    "demo:preview": "npm --prefix demo-app run preview",
+    "dev": "npm --prefix demo-app run dev",
+    "build": "npm --prefix demo-app run build"
   },
   "repository": {
     "type": "git",
